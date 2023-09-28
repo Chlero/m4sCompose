@@ -1,5 +1,5 @@
-﻿#include<bits/stdc++.h>
-#include<Windows.h>
+﻿#include <bits/stdc++.h>
+#include <Windows.h>
 using namespace std;
 //Verson 1.1
 string GetName(string a, string b)
@@ -12,9 +12,9 @@ int main()
 {
 	string a, b;
 	cout << "声音：";
-	cin >> a;
+	getline(cin, a);
 	cout << "视频：";
-	cin >> b;
+	getline(cin, b);
 	string wz = "ffmpeg -i " + a + " -i " + b + " " + GetName(a, b);
 	system(wz.c_str());
 	return 0;
